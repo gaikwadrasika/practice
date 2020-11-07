@@ -1,0 +1,113 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Resizing & Cropping</title>
+    <meta name="description" content="Learn how to resize images using JavaScript and the HTML5 Canvas element using controls, commonly seen in photo editing applications." />
+    <meta name="keywords" content="canvas, javascript, HTML5, resizing, images" />
+    <meta name="author" content="Codrops" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/ImageResizeCropCanvas/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/ImageResizeCropCanvas/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/ImageResizeCropCanvas/css/component.css" />
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            color: #000;
+        }
+
+        h2 {
+            color: coral;
+        }
+
+        .row {
+            margin-top: 50px;
+        }
+
+        .ca-menu li:hover {
+            color: #fff !important;
+        }
+
+        .divbg {
+            background: #fff;
+            margin: 96px 0;
+            padding: 50px;
+            border-radius: 25px;
+        }
+
+        .navbar-inverse {
+            background: #6f60ab;
+        }
+
+        .cropheader {
+            position: absolute;
+            left: 44%;
+            margin: 0;
+            background: #e46f6f;
+            width: 180px;
+            height: 180px;
+            border-radius: 100%;
+            padding-top: 14px;
+            top: 5px;
+            color: #fff;
+            border: #fff solid 5px;
+        }
+    </style>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <!-- Top Navigation -->
+
+        <div class="content divbg">
+            <header class="cropheader">
+                <i class="fa fa-user-circle-o fa-5x iicon" aria-hidden="true"></i>
+                <h1>Image Resizing &amp; Cropping </h1>
+            </header>
+            <div class="component">
+                <div class="overlay">
+                    <div class="overlay-inner">
+                    </div>
+                </div>
+
+                    <img class="resize-image" src="/DefaultImages/noImage.png" alt="image for resizing">
+
+                <button class="btn-crop js-crop">Crop Image<img class="icon-crop" src="/ImageResizeCropCanvas/img/crop.svg"></button>
+            </div>
+            <div class="arrowgif"><img src="/Images/left-arrow.gif"><br>Click here to crop</div>
+            <div id="divImage" style="display:none">
+                <a href="#" download="download.jpg" target="_blank" id="download_photo_btn" class="btn btn-info" style="color:#fff; margin-top: 10px; width: 120px; margin-right: 10px; font-size: 17px; font-weight: bold; float: left; " title="Save Photo">
+                    <i class="fa fa-download" aria-hidden="true"></i>  Download
+                </a>
+                <div class="arrowgifdownload"><img src="/Images/left-arrow.gif">Click here to Download</div>
+            </div>
+            <div>
+                <a href="/ImageResize/Upload" class="btn btn-danger" onclick="return confirm('Are you sure you want to Cancel?')" id="download_photo_btn" style="color: #fff;margin-top: 10px; width: 120px;font-size: 17px; font-weight: bold;  float: right;" title="Save Photo">
+                    <i class="fa fa-times" aria-hidden="true"></i>  Cancel
+                </a>
+            </div>
+
+
+        </div><!-- /content -->
+        <!-- Related demos -->
+        <footer class="text-center">
+            <img src="/Images/mol-logo.png" />
+
+        </footer>
+        <section class="related"></section>
+    </div> <!-- /container -->
+    <script src="/ImageResizeCropCanvas/js/jquery-2.1.1.min.js"></script>
+    <script src="/ImageResizeCropCanvas/js/component.js"></script>
+</body>
+</html>
